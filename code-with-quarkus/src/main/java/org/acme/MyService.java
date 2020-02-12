@@ -16,11 +16,7 @@ public class MyService {
     private MyEntityRepository repository;
 
     public MyEntity transactionTest() {
-
-        if(!MyEntity.findAll().list().isEmpty()) {
-            throw new RuntimeException("teste");
-        }
-
+        
         MyEntity entity = new MyEntity();
         entity.name = "Name";
         entity.startingTime = new Date().getTime();
